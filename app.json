@@ -1,0 +1,39 @@
+{
+  "id": "81765d92-db70-4851-919e-c9d1c18fa5cb",
+  "name": "JobQueueExtras",
+  "publisher": "picazin.dev",
+  "version": "0.9.0.0",
+  "brief": "Some extra features to Job Queue",
+  "description": "Some extra features to Job Queue. Enable / disable parallel executions. Infinite retry.",
+  "privacyStatement": "https://picazin.dev",
+  "EULA": "https://picazin.dev",
+  "help": "https://picazin.dev",
+  "url": "https://picazin.dev",
+  "logo": "./src/logo/logo.png",
+  "dependencies": [
+    {
+      "id": "63ca2fa4-4f03-4f2b-a480-172fef340d3f",
+      "publisher": "Microsoft",
+      "name": "System Application",
+      "version": "16.0.0.0"
+    },
+    {
+      "id": "437dbf0e-84ff-417a-965d-ed2bb9650972",
+      "publisher": "Microsoft",
+      "name": "Base Application",
+      "version": "16.0.0.0"
+    }
+  ],
+  "screenshots": [],
+  "platform": "16.0.0.0",
+  "idRanges": [
+    {
+      "from": 50100,
+      "to": 50149
+    }
+  ],
+  "features": ["TranslationFile"],
+  "contextSensitiveHelpUrl": "https://picazin.dev",
+  "showMyCode": true,
+  "runtime": "5.0"
+}

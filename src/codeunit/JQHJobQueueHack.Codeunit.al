@@ -24,13 +24,31 @@ codeunit 50100 "JQH Job Queue Hack"
         JQEntry: Record "Job Queue Entry";
     begin
         if JobQueueEntry."JQH Disable Concurrent Run" then begin
-            JQEntry.SetCurrentKey("Object Type to Run", "Object ID to Run", Status);
+            JQEntry.SetCurrentKey("Object Type to Run", "Object ID to Run", Status, ID);
             JQEntry.SetRange("Object Type to Run", JobQueueEntry."Object Type to Run");
             JQEntry.SetRange("Object ID to Run", JobQueueEntry."Object ID to Run");
             JQEntry.SetRange(Status, JQEntry.Status::"In Process");
+            JQEntry.SetFilter(ID, '<>%1', JobQueueEntry.ID);
             Skip := not JQEntry.IsEmpty();
+
+            if Skip then begin
+                JobQueueEntry.SetStatus(JobQueueEntry.Status::"On Hold");
+                JobQueueEntry.Modify();
+                Commit();
+                Codeunit.Run(Codeunit::"Job Queue - Enqueue", JobQueueEntry);
+            end;
         end;
     end;
 
+    [EventSubscriber(ObjectType::Table, Database::"Job Queue Entry", 'OnAfterFinalizeRun', '', false, false)]
+    local procedure OnAfterFinalizeRun(JobQueueEntry: Record "Job Queue Entry");
+    begin
+        if JobQueueEntry."JQH Recurrent On Error" and (JobQueueEntry.Status = JobQueueEntry.Status::Error) then begin
+            JobQueueEntry.SetStatus(JobQueueEntry.Status::"On Hold");
+            JobQueueEntry.Modify();
+            Commit();
+            Codeunit.Run(Codeunit::"Job Queue - Enqueue", JobQueueEntry);
+        end;
+    end;
 
 }

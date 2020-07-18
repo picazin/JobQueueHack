@@ -12,7 +12,7 @@ pageextension 50100 "JQH Hack Actions" extends "Job Queue Entries"
             action("JQH CreateRecords")
             {
                 ApplicationArea = All;
-                Caption = 'Create 100 demo records';
+                Caption = 'Create 20 demo records';
                 Image = Entries;
                 Promoted = true;
                 PromotedCategory = Process;
@@ -22,7 +22,7 @@ pageextension 50100 "JQH Hack Actions" extends "Job Queue Entries"
                 var
                     JQH: Codeunit "JQH Job Queue Hack";
                 begin
-                    JQH.CreateJQEntry(100);
+                    JQH.CreateJQEntry(1);
                 end;
             }
             action("JQH Refresh")

@@ -24,13 +24,12 @@ pageextension 50101 "JQH Hack Entry Card" extends "Job Queue Entry Card"
             {
                 ApplicationArea = All;
                 Caption = 'Allowed Errors';
-                Image = Error;
+                Image = ErrorLog;
                 Promoted = true;
                 PromotedCategory = Process;
                 PromotedOnly = true;
                 RunObject = page "JQH Allowed Errors";
                 RunPageLink = "Object Type to Run" = field("Object Type to Run"), "Object ID to Run" = field("Object ID to Run");
-
             }
         }
     }
@@ -38,7 +37,7 @@ pageextension 50101 "JQH Hack Entry Card" extends "Job Queue Entry Card"
     trigger OnQueryClosePage(CloseAction: Action): Boolean
     var
         AllowedErr: Record "JQH Allowed Errors";
-        EmptyAllowErr: Label 'Allowed errors must be set when %1 is selected';
+        EmptyAllowErr: Label 'Allowed errors must be set when %1 is selected.', Comment = '%1 = field name';
     begin
         if "JQH Rec. On Selected Errors" then begin
             AllowedErr.SetRange("Object Type to Run", "Object Type to Run");

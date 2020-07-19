@@ -36,7 +36,14 @@ table 50100 "JQH Allowed Errors"
             Caption = 'Object ID to Run';
             DataClassification = SystemMetadata;
         }
-        field(4; "Error Text"; Text[2048])
+        field(4; "Object Caption to Run"; Text[250])
+        {
+            CalcFormula = Lookup (AllObjWithCaption."Object Caption" where("Object Type" = field("Object Type to Run"), "Object ID" = field("Object ID to Run")));
+            Caption = 'Name';
+            Editable = false;
+            FieldClass = FlowField;
+        }
+        field(5; "Error Text"; Text[2048])
         {
             Caption = 'Error Text';
             DataClassification = SystemMetadata;

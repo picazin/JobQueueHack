@@ -1,6 +1,6 @@
 codeunit 50100 "JQH Job Queue Hack"
 {
-    procedure CreateJQEntry(NoOfEntries: Integer)
+    procedure CreateJQEntry(JQType: Integer; NoOfEntries: Integer)
     var
         JQEntry: Record "Job Queue Entry";
         Counter: Integer;
@@ -9,7 +9,14 @@ codeunit 50100 "JQH Job Queue Hack"
             JQEntry.Init();
             Clear(JQEntry.ID);
             JQEntry."Object Type to Run" := JQEntry."Object Type to Run"::Codeunit;
-            JQEntry."Object ID to Run" := Codeunit::"JQH Dummy Process";
+
+            case JQType of
+                1:
+                    JQEntry."Object ID to Run" := Codeunit::"JQH Dummy Concurrent Process";
+                2:
+                    JQEntry."Object ID to Run" := Codeunit::"JQH Dummy Error Process";
+            end;
+
             JQEntry.Description := 'Dummy Process';
             JQEntry."User Session ID" := SessionId();
             JQEntry."JQH Disable Concurrent Run" := true;
@@ -44,6 +51,7 @@ codeunit 50100 "JQH Job Queue Hack"
     local procedure OnAfterFinalizeRun(JobQueueEntry: Record "Job Queue Entry");
     var
         AllowedErr: Record "JQH Allowed Errors";
+        MatchFound: Boolean;
     begin
         if (JobQueueEntry.Status = JobQueueEntry.Status::Error) then begin
 
@@ -53,9 +61,14 @@ codeunit 50100 "JQH Job Queue Hack"
             if JobQueueEntry."JQH Rec. On Selected Errors" then begin
                 AllowedErr.SetRange("Object Type to Run", JobQueueEntry."Object Type to Run");
                 AllowedErr.SetRange("Object ID to Run", JobQueueEntry."Object ID to Run");
-                AllowedErr.SetRange("Error Text", JobQueueEntry."Error Message");
-                if not AllowedErr.IsEmpty() then
-                    Restart(JobQueueEntry)
+                if AllowedErr.FindSet() then
+                    repeat
+                        if StrPos(JobQueueEntry."Error Message", AllowedErr."Error Text") <> 0 then begin
+                            MatchFound := true;
+                            Restart(JobQueueEntry);
+                        end;
+                    until (AllowedErr.Next() = 0) or MatchFound;
+
             end;
         end;
     end;

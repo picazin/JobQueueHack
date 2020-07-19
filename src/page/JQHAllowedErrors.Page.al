@@ -7,7 +7,7 @@ page 50100 "JQH Allowed Errors"
     SourceTable = "JQH Allowed Errors";
     UsageCategory = Lists;
     DelayedInsert = true;
-    MultipleNewLines = true;
+    //MultipleNewLines = true;
     AutoSplitKey = true;
 
     layout
@@ -21,6 +21,10 @@ page 50100 "JQH Allowed Errors"
                     ApplicationArea = All;
                 }
                 field("Object ID to Run"; "Object ID to Run")
+                {
+                    ApplicationArea = All;
+                }
+                field("Object Caption to Run"; "Object Caption to Run")
                 {
                     ApplicationArea = All;
                 }

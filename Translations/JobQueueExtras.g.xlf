@@ -23,6 +23,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JQH Allowed Errors - Field Line No - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 545287212 - Field 3371015643 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JQH Allowed Errors - Field Object Caption to Run - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 545287212 - Field 1476062623 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Error Text</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -33,10 +38,20 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JQH Allowed Errors - Property Caption</note>
         </trans-unit>
-        <trans-unit id="PageExtension 1693818265 - Action 1169357635 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 942706168">
-          <source>Create 20 demo records</source>
+        <trans-unit id="PageExtension 1693818265 - Action 1429505756 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 942706168">
+          <source>Allowed Errors</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JQH Hack Actions - Action JQH CreateRecords - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JQH Hack Actions - Action JQH_Allowed_Errors - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1693818265 - Action 2477356998 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 942706168">
+          <source>Create demo concurrent error records</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JQH Hack Actions - Action JQH Create Concurrent Records - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1693818265 - Action 737997507 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 942706168">
+          <source>Create demo error records</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JQH Hack Actions - Action JQH Create Error Records - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 1693818265 - Action 256080298 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 942706168">
           <source>Refresh</source>
@@ -54,8 +69,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JQH Hack Entry Card - Action JQH_Allowed_Errors - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 183723966 - Method 4177352842 - NamedType 3944863203" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2276662850">
-          <source>Allowed errors must be set when %1 is selected</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <source>Allowed errors must be set when %1 is selected.</source>
+          <note from="Developer" annotates="general" priority="2">%1 = field name</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JQH Hack Entry Card - Method OnQueryClosePage - NamedType EmptyAllowErr</note>
         </trans-unit>
         <trans-unit id="TableExtension 1867436581 - Field 2911704815 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2990248934">

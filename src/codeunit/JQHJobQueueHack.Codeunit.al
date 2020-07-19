@@ -42,13 +42,29 @@ codeunit 50100 "JQH Job Queue Hack"
 
     [EventSubscriber(ObjectType::Table, Database::"Job Queue Entry", 'OnAfterFinalizeRun', '', false, false)]
     local procedure OnAfterFinalizeRun(JobQueueEntry: Record "Job Queue Entry");
+    var
+        AllowedErr: Record "JQH Allowed Errors";
     begin
-        if JobQueueEntry."JQH Recurrent On Error" and (JobQueueEntry.Status = JobQueueEntry.Status::Error) then begin
-            JobQueueEntry.SetStatus(JobQueueEntry.Status::"On Hold");
-            JobQueueEntry.Modify();
-            Commit();
-            Codeunit.Run(Codeunit::"Job Queue - Enqueue", JobQueueEntry);
+        if (JobQueueEntry.Status = JobQueueEntry.Status::Error) then begin
+
+            if JobQueueEntry."JQH Recurrent On Error" then
+                Restart(JobQueueEntry);
+
+            if JobQueueEntry."JQH Rec. On Selected Errors" then begin
+                AllowedErr.SetRange("Object Type to Run", JobQueueEntry."Object Type to Run");
+                AllowedErr.SetRange("Object ID to Run", JobQueueEntry."Object ID to Run");
+                AllowedErr.SetRange("Error Text", JobQueueEntry."Error Message");
+                if not AllowedErr.IsEmpty() then
+                    Restart(JobQueueEntry)
+            end;
         end;
     end;
 
+    local procedure Restart(var JobQueueEntry: Record "Job Queue Entry")
+    begin
+        JobQueueEntry.SetStatus(JobQueueEntry.Status::"On Hold");
+        JobQueueEntry.Modify();
+        Commit();
+        Codeunit.Run(Codeunit::"Job Queue - Enqueue", JobQueueEntry);
+    end;
 }

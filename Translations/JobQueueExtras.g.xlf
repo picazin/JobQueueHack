@@ -3,6 +3,36 @@
   <file datatype="xml" source-language="en-US" target-language="en-US" original="JobQueueExtras">
     <body>
       <group id="body">
+        <trans-unit id="Table 545287212 - Field 994380745 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Object Type to Run</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JQH Allowed Errors - Field Object Type to Run - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 545287212 - Field 994380745 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>,,,Report,,Codeunit</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JQH Allowed Errors - Field Object Type to Run - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="Table 545287212 - Field 1577117606 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Object ID to Run</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JQH Allowed Errors - Field Object ID to Run - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 545287212 - Field 3123372377 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Object ID to Run</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JQH Allowed Errors - Field Line No - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 545287212 - Field 1476062623 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Error Text</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JQH Allowed Errors - Field Error Text - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 545287212 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>JQH Allowed Errors</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JQH Allowed Errors - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 1693818265 - Action 1169357635 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 942706168">
           <source>Create 20 demo records</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -18,6 +48,16 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JQH Hack Entry Card - Control JQH Hack - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 183723966 - Action 1429505756 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2276662850">
+          <source>Allowed Errors</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JQH Hack Entry Card - Action JQH_Allowed_Errors - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 183723966 - Method 4177352842 - NamedType 3944863203" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2276662850">
+          <source>Allowed errors must be set when %1 is selected</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JQH Hack Entry Card - Method OnQueryClosePage - NamedType EmptyAllowErr</note>
+        </trans-unit>
         <trans-unit id="TableExtension 1867436581 - Field 2911704815 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2990248934">
           <source>JQH Disable Concurrent Run</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -27,6 +67,11 @@
           <source>JQH Recurrent On Error</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension JQH Hack Queue - Field JQH Recurrent On Error - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1867436581 - Field 4241327142 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2990248934">
+          <source>JQH Rec. On Selected Errors</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JQH Hack Queue - Field JQH Rec. On Selected Errors - Property Caption</note>
         </trans-unit>
       </group>
     </body>

@@ -19,8 +19,8 @@ codeunit 50100 "JQH Job Queue Hack"
 
             JQEntry.Description := 'Dummy Process';
             JQEntry."User Session ID" := SessionId();
-            JQEntry."JQH Disable Concurrent Run" := true;
-            JQEntry."JQH Recurrent On Error" := true;
+            JQEntry."JQH Disable Concurrent Run" := false;
+            JQEntry."JQH Recurrent On Error" := false;
             Codeunit.Run(Codeunit::"Job Queue - Enqueue", JQEntry);
         end;
     end;
@@ -31,6 +31,7 @@ codeunit 50100 "JQH Job Queue Hack"
         JQEntry: Record "Job Queue Entry";
     begin
         if JobQueueEntry."JQH Disable Concurrent Run" then begin
+            JQEntry.LockTable();
             JQEntry.SetCurrentKey("Object Type to Run", "Object ID to Run", Status, ID);
             JQEntry.SetRange("Object Type to Run", JobQueueEntry."Object Type to Run");
             JQEntry.SetRange("Object ID to Run", JobQueueEntry."Object ID to Run");
@@ -39,6 +40,9 @@ codeunit 50100 "JQH Job Queue Hack"
             Skip := not JQEntry.IsEmpty();
 
             if Skip then begin
+                Randomize();
+                Clear(JQEntry."System Task ID"); // to avoid canceling this task, which has already been executed
+                JQEntry."Earliest Start Date/Time" := CurrentDateTime + 2000 + Random(5000);
                 JobQueueEntry.SetStatus(JobQueueEntry.Status::"On Hold");
                 JobQueueEntry.Modify();
                 Commit();

@@ -3,6 +3,7 @@ codeunit 50100 "JQH Job Queue Hack"
     procedure CreateJQEntry(JQType: Integer; NoOfEntries: Integer)
     var
         JQEntry: Record "Job Queue Entry";
+        JQEntry2: Record "Job Queue Entry";
         Counter: Integer;
     begin
         for Counter := 1 to NoOfEntries do begin
@@ -22,6 +23,18 @@ codeunit 50100 "JQH Job Queue Hack"
             JQEntry."JQH Disable Concurrent Run" := false;
             JQEntry."JQH Recurrent On Error" := false;
             Codeunit.Run(Codeunit::"Job Queue - Enqueue", JQEntry);
+
+            if JQType = 1 then begin
+                JQEntry2.Init();
+                Clear(JQEntry2.ID);
+                JQEntry2."Object Type to Run" := JQEntry2."Object Type to Run"::Codeunit;
+                JQEntry2."Object ID to Run" := Codeunit::"JQH Other Dummy Conc. Process";
+                JQEntry2.Description := 'Dummy Process';
+                JQEntry2."User Session ID" := SessionId();
+                JQEntry2."JQH Disable Concurrent Run" := false;
+                JQEntry2."JQH Recurrent On Error" := false;
+                Codeunit.Run(Codeunit::"Job Queue - Enqueue", JQEntry2);
+            end;
         end;
     end;
 

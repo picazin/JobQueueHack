@@ -1,4 +1,4 @@
-codeunit 50101 "JQH Dummy Concurrent Process"
+codeunit 50103 "JQH Other Dummy Conc. Process"
 {
     trigger OnRun()
     var
@@ -7,11 +7,11 @@ codeunit 50101 "JQH Dummy Concurrent Process"
         ExLog.LockTable();
         ExLog.Init();
         ExLog."Object Type to Run" := ExLog."Object Type to Run"::Codeunit;
-        ExLog."Object ID to Run" := Codeunit::"JQH Dummy Concurrent Process";
+        ExLog."Object ID to Run" := Codeunit::"JQH Other Dummy Conc. Process";
         ExLog."Start DT" := CurrentDateTime();
         ExLog.Insert(true);
         Commit();
-        Sleep(1000);
+        Sleep(100);
         ExLog."End DT" := CurrentDateTime();
         ExLog.Modify();
         Commit();

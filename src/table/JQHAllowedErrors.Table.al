@@ -1,4 +1,4 @@
-table 50100 "JQH Allowed Errors"
+table 83250 "JQH Allowed Errors"
 {
     DataClassification = SystemMetadata;
 
@@ -10,12 +10,6 @@ table 50100 "JQH Allowed Errors"
             DataClassification = SystemMetadata;
             OptionCaption = ',,,Report,,Codeunit';
             OptionMembers = ,,,"Report",,"Codeunit";
-
-            trigger OnValidate()
-            begin
-                if "Object Type to Run" <> xRec."Object Type to Run" then
-                    Validate("Object ID to Run", 0);
-            end;
         }
         field(2; "Object ID to Run"; Integer)
         {

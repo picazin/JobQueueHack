@@ -1,4 +1,4 @@
-pageextension 50100 "JQH Hack Actions" extends "Job Queue Entries"
+pageextension 83250 "JQH Hack Actions" extends "Job Queue Entries"
 {
     actions
     {
@@ -14,6 +14,7 @@ pageextension 50100 "JQH Hack Actions" extends "Job Queue Entries"
                 PromotedOnly = true;
                 RunObject = page "JQH Allowed Errors";
                 RunPageLink = "Object Type to Run" = field("Object Type to Run"), "Object ID to Run" = field("Object ID to Run");
+                ToolTip = 'List of allowed errors for selected process';
             }
             action("JQH Refresh")
             {
@@ -23,42 +24,12 @@ pageextension 50100 "JQH Hack Actions" extends "Job Queue Entries"
                 Promoted = true;
                 PromotedCategory = Process;
                 PromotedOnly = true;
+                ToolTip = 'Get refreshed data';
 
                 trigger OnAction()
                 begin
                     CurrPage.Update(false);
                 end;
-            }
-            group("JQH_Demo_Data")
-            {
-                Caption = 'Generate Demo data';
-                Image = DataEntry;
-                action("JQH Create Concurrent Records")
-                {
-                    ApplicationArea = All;
-                    Caption = 'Create demo concurrent error records';
-                    Image = Entries;
-
-                    trigger OnAction()
-                    var
-                        JQH: Codeunit "JQH Job Queue";
-                    begin
-                        JQH.CreateJQEntry(1, 20);
-                    end;
-                }
-                action("JQH Create Error Records")
-                {
-                    ApplicationArea = All;
-                    Caption = 'Create demo error records';
-                    Image = Entries;
-
-                    trigger OnAction()
-                    var
-                        JQH: Codeunit "JQH Job Queue";
-                    begin
-                        JQH.CreateJQEntry(2, 5);
-                    end;
-                }
             }
         }
     }

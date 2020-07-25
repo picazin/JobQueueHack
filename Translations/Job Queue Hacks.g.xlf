@@ -38,95 +38,80 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JQH Allowed Errors - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 1906748111 - Field 883711285 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Entry No.</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table JQH Execution Log - Field Entry No. - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Table 1906748111 - Field 994380745 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Object Type to Run</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table JQH Execution Log - Field Object Type to Run - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Table 1906748111 - Field 994380745 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
-          <source>,,,Report,,Codeunit</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table JQH Execution Log - Field Object Type to Run - Property OptionCaption</note>
-        </trans-unit>
-        <trans-unit id="Table 1906748111 - Field 1577117606 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Object ID to Run</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table JQH Execution Log - Field Object ID to Run - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Table 1906748111 - Field 3371015643 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Name</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table JQH Execution Log - Field Object Caption to Run - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Table 1906748111 - Field 2294981748 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Start Processing</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table JQH Execution Log - Field Start DT - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Table 1906748111 - Field 368069385 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>End Processing</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table JQH Execution Log - Field End DT - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 1906748111 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>JQH Execution Log</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JQH Execution Log - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 1906748111 - Control 2294981748 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Start Processing</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JQH Execution Log - Control Start DT - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 1906748111 - Control 368069385 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>End Processing</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JQH Execution Log - Control End DT - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 1906748111 - Control 1389032272 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Run Time</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JQH Execution Log - Control RunTime - Property Caption</note>
-        </trans-unit>
         <trans-unit id="PageExtension 1693818265 - Action 1429505756 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 942706168">
           <source>Allowed Errors</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JQH Hack Actions - Action JQH_Allowed_Errors - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1693818265 - Action 1429505756 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 942706168">
+          <source>List of allowed errors for selected process</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JQH Hack Actions - Action JQH_Allowed_Errors - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 1693818265 - Action 256080298 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 942706168">
           <source>Refresh</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JQH Hack Actions - Action JQH Refresh - Property Caption</note>
         </trans-unit>
-        <trans-unit id="PageExtension 1693818265 - Action 3080002316 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 942706168">
-          <source>Generate Demo data</source>
+        <trans-unit id="PageExtension 1693818265 - Action 256080298 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 942706168">
+          <source>Get refreshed data</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JQH Hack Actions - Action JQH_Demo_Data - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="PageExtension 1693818265 - Action 2477356998 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 942706168">
-          <source>Create demo concurrent error records</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JQH Hack Actions - Action JQH Create Concurrent Records - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="PageExtension 1693818265 - Action 737997507 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 942706168">
-          <source>Create demo error records</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JQH Hack Actions - Action JQH Create Error Records - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JQH Hack Actions - Action JQH Refresh - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 183723966 - Control 4103073662 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2276662850">
           <source>Hack Job Queue</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JQH Hack Entry Card - Control JQH Hack - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 183723966 - Control 2911704815 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2276662850">
+          <source>Disable Concurrent Run</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JQH Hack Entry Card - Control JQH Disable Concurrent Run - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 183723966 - Control 2911704815 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2276662850">
+          <source>If checked, only one record of this type will run at the same time</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JQH Hack Entry Card - Control JQH Disable Concurrent Run - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 183723966 - Control 1417107030 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2276662850">
+          <source>Disable Concurrency</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JQH Hack Entry Card - Control JQH Disable Concurrency - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 183723966 - Control 1417107030 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2276662850">
+          <source>If checked, only one record will run</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JQH Hack Entry Card - Control JQH Disable Concurrency - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 183723966 - Control 327089056 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2276662850">
+          <source>Recurrent On Error</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JQH Hack Entry Card - Control JQH Recurrent On Error - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 183723966 - Control 327089056 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2276662850">
+          <source>The entry will be reprocessed again and again if the execution result is an error</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JQH Hack Entry Card - Control JQH Recurrent On Error - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 183723966 - Control 4241327142 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2276662850">
+          <source>Recurrent On Selected Errors</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JQH Hack Entry Card - Control JQH Rec. On Selected Errors - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 183723966 - Control 4241327142 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2276662850">
+          <source>The entry will be reprocessed again and again if the execution result is an error and this error matches one of the defined errors</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JQH Hack Entry Card - Control JQH Rec. On Selected Errors - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="PageExtension 183723966 - Action 1429505756 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2276662850">
           <source>Allowed Errors</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JQH Hack Entry Card - Action JQH_Allowed_Errors - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 183723966 - Action 1429505756 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2276662850">
+          <source>List of allowed errors that will be ignored.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JQH Hack Entry Card - Action JQH_Allowed_Errors - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 183723966 - Method 4177352842 - NamedType 3944863203" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2276662850">
           <source>Allowed errors must be set when %1 is selected.</source>

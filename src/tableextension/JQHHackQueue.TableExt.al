@@ -1,8 +1,8 @@
-tableextension 50100 "JQH Hack Queue" extends "Job Queue Entry"
+tableextension 83250 "JQH Hack Queue" extends "Job Queue Entry"
 {
     fields
     {
-        field(50100; "JQH Disable Concurrent Run"; Boolean)
+        field(83250; "JQH Disable Concurrent Run"; Boolean)
         {
             DataClassification = SystemMetadata;
             trigger OnValidate()
@@ -10,7 +10,7 @@ tableextension 50100 "JQH Hack Queue" extends "Job Queue Entry"
                 "JQH Disable Concurrency" := false;
             end;
         }
-        field(50101; "JQH Disable Concurrency"; Boolean)
+        field(83251; "JQH Disable Concurrency"; Boolean)
         {
             DataClassification = SystemMetadata;
             trigger OnValidate()
@@ -19,7 +19,7 @@ tableextension 50100 "JQH Hack Queue" extends "Job Queue Entry"
             end;
         }
 
-        field(50102; "JQH Recurrent On Error"; Boolean)
+        field(83252; "JQH Recurrent On Error"; Boolean)
         {
             DataClassification = SystemMetadata;
             trigger OnValidate()
@@ -27,7 +27,7 @@ tableextension 50100 "JQH Hack Queue" extends "Job Queue Entry"
                 "JQH Rec. On Selected Errors" := false;
             end;
         }
-        field(50103; "JQH Rec. On Selected Errors"; Boolean)
+        field(83253; "JQH Rec. On Selected Errors"; Boolean)
         {
             DataClassification = SystemMetadata;
             trigger OnValidate()

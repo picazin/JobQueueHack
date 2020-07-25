@@ -1,11 +1,11 @@
-codeunit 50100 "JQH Job Queue Hack"
+codeunit 83250 "JQH Job Queue Hack"
 {
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Job Queue Dispatcher", 'OnBeforeRun', '', false, false)]
     local procedure OnBeforeRun(var JobQueueEntry: Record "Job Queue Entry"; var Skip: Boolean);
     var
         JQEntry: Record "Job Queue Entry";
     begin
-        if JobQueueEntry."JQH Disable Concurrency" or JobQueueEntry."JQH Disable Concurrent Run" then begin
+        if (JobQueueEntry."JQH Disable Concurrency" or JobQueueEntry."JQH Disable Concurrent Run") then begin
             JQEntry.LockTable();
             JQEntry.SetCurrentKey("Object Type to Run", "Object ID to Run", Status, ID);
             if JobQueueEntry."JQH Disable Concurrent Run" then begin
@@ -15,17 +15,24 @@ codeunit 50100 "JQH Job Queue Hack"
             JQEntry.SetRange(Status, JQEntry.Status::"In Process");
             JQEntry.SetFilter(ID, '<>%1', JobQueueEntry.ID);
             Skip := not JQEntry.IsEmpty();
-
-            if Skip then begin
-                Randomize();
-                Clear(JobQueueEntry."System Task ID"); // to avoid canceling this task, which has already been executed
-                JobQueueEntry."Earliest Start Date/Time" := CurrentDateTime + JobQueueEntry."Rerun Delay (sec.)" + Random(1000);
-                JobQueueEntry.SetStatus(JobQueueEntry.Status::"On Hold");
-                JobQueueEntry.Modify();
-                Commit();
-                Codeunit.Run(Codeunit::"Job Queue - Enqueue", JobQueueEntry);
-            end;
+        end else begin
+            JQEntry.LockTable();
+            JQEntry.SetCurrentKey("Starting Time", "JQH Disable Concurrency");
+            JQEntry.SetRange(Status, JobQueueEntry.Status::"In Process");
+            JQEntry.SetRange("JQH Disable Concurrency", true);
+            Skip := not JQEntry.IsEmpty();
         end;
+
+        if Skip then begin
+            Randomize();
+            Clear(JobQueueEntry."System Task ID"); // to avoid canceling this task, which has already been executed
+            JobQueueEntry."Earliest Start Date/Time" := CurrentDateTime + JobQueueEntry."Rerun Delay (sec.)" + Random(1000);
+            JobQueueEntry.SetStatus(JobQueueEntry.Status::"On Hold");
+            JobQueueEntry.Modify();
+            Commit();
+            Codeunit.Run(Codeunit::"Job Queue - Enqueue", JobQueueEntry);
+        end;
+
     end;
 
     [EventSubscriber(ObjectType::Table, Database::"Job Queue Entry", 'OnAfterFinalizeRun', '', false, false)]

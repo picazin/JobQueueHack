@@ -1,4 +1,4 @@
-page 50100 "JQH Allowed Errors"
+page 83250 "JQH Allowed Errors"
 {
 
     ApplicationArea = All;
@@ -19,6 +19,11 @@ page 50100 "JQH Allowed Errors"
                 field("Object Type to Run"; "Object Type to Run")
                 {
                     ApplicationArea = All;
+                    trigger OnValidate()
+                    begin
+                        if "Object Type to Run" <> xRec."Object Type to Run" then
+                            Validate("Object ID to Run", 0);
+                    end;
                 }
                 field("Object ID to Run"; "Object ID to Run")
                 {
@@ -35,4 +40,8 @@ page 50100 "JQH Allowed Errors"
             }
         }
     }
+    trigger OnAfterGetCurrRecord()
+    begin
+        CalcFields("Object Caption to Run");
+    end;
 }

@@ -1,4 +1,4 @@
-pageextension 50101 "JQH Hack Entry Card" extends "Job Queue Entry Card"
+pageextension 83251 "JQH Hack Entry Card" extends "Job Queue Entry Card"
 {
     layout
     {
@@ -8,13 +8,29 @@ pageextension 50101 "JQH Hack Entry Card" extends "Job Queue Entry Card"
             {
                 Caption = 'Hack Job Queue';
                 field("JQH Disable Concurrent Run"; "JQH Disable Concurrent Run")
-                { ApplicationArea = All; }
+                {
+                    Caption = 'Disable Concurrent Run';
+                    ApplicationArea = All;
+                    ToolTip = 'If checked, only one record of this type will run at the same time';
+                }
                 field("JQH Disable Concurrency"; "JQH Disable Concurrency")
-                { ApplicationArea = All; }
+                {
+                    Caption = 'Disable Concurrency';
+                    ApplicationArea = All;
+                    ToolTip = 'If checked, only one record will run';
+                }
                 field("JQH Recurrent On Error"; "JQH Recurrent On Error")
-                { ApplicationArea = All; }
+                {
+                    Caption = 'Recurrent On Error';
+                    ApplicationArea = All;
+                    ToolTip = 'The entry will be reprocessed again and again if the execution result is an error';
+                }
                 field("JQH Rec. On Selected Errors"; "JQH Rec. On Selected Errors")
-                { ApplicationArea = All; }
+                {
+                    Caption = 'Recurrent On Selected Errors';
+                    ApplicationArea = All;
+                    ToolTip = 'The entry will be reprocessed again and again if the execution result is an error and this error matches one of the defined errors';
+                }
             }
         }
     }
@@ -32,6 +48,7 @@ pageextension 50101 "JQH Hack Entry Card" extends "Job Queue Entry Card"
                 PromotedOnly = true;
                 RunObject = page "JQH Allowed Errors";
                 RunPageLink = "Object Type to Run" = field("Object Type to Run"), "Object ID to Run" = field("Object ID to Run");
+                ToolTip = 'List of allowed errors that will be ignored.';
             }
         }
     }

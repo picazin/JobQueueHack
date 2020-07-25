@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
-  <file datatype="xml" source-language="en-US" target-language="en-US" original="JobQueueExtras">
+  <file datatype="xml" source-language="en-US" target-language="en-US" original="Job Queue Hacks">
     <body>
       <group id="body">
         <trans-unit id="Table 545287212 - Field 994380745 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -88,6 +88,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JQH Execution Log - Control End DT - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 1906748111 - Control 1389032272 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Run Time</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JQH Execution Log - Control RunTime - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 1693818265 - Action 1429505756 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 942706168">
           <source>Allowed Errors</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -132,6 +137,11 @@
           <source>JQH Disable Concurrent Run</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension JQH Hack Queue - Field JQH Disable Concurrent Run - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1867436581 - Field 1417107030 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2990248934">
+          <source>JQH Disable Concurrency</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JQH Hack Queue - Field JQH Disable Concurrency - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 1867436581 - Field 327089056 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2990248934">
           <source>JQH Recurrent On Error</source>

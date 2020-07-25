@@ -7,6 +7,7 @@ table 50101 "JQH Execution Log"
         field(1; "Entry No."; Integer)
         {
             DataClassification = SystemMetadata;
+            AutoIncrement = true;
         }
         field(2; "Object Type to Run"; Option)
         {
@@ -48,6 +49,7 @@ table 50101 "JQH Execution Log"
             Clustered = true;
         }
     }
+    /*
     trigger OnInsert()
     var
         ExecutionLog: Record "JQH Execution Log";
@@ -57,4 +59,5 @@ table 50101 "JQH Execution Log"
         else
             "Entry No." := 1;
     end;
+    */
 }

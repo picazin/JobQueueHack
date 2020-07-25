@@ -6,6 +6,7 @@ page 50101 "JQH Execution Log"
     PageType = List;
     SourceTable = "JQH Execution Log";
     UsageCategory = Lists;
+    Editable = false;
 
     layout
     {
@@ -39,7 +40,19 @@ page 50101 "JQH Execution Log"
                     Caption = 'End Processing';
                     ApplicationArea = All;
                 }
+                field(RunTime; RunTime)
+                {
+                    Caption = 'Run Time';
+                    ApplicationArea = All;
+                }
             }
         }
     }
+    var
+        RunTime: Duration;
+
+    trigger OnAfterGetRecord()
+    begin
+        RunTime := "End DT" - "Start DT";
+    end;
 }

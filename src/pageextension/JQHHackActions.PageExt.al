@@ -41,7 +41,7 @@ pageextension 50100 "JQH Hack Actions" extends "Job Queue Entries"
 
                     trigger OnAction()
                     var
-                        JQH: Codeunit "JQH Job Queue Hack";
+                        JQH: Codeunit "JQH Job Queue";
                     begin
                         JQH.CreateJQEntry(1, 20);
                     end;
@@ -54,7 +54,7 @@ pageextension 50100 "JQH Hack Actions" extends "Job Queue Entries"
 
                     trigger OnAction()
                     var
-                        JQH: Codeunit "JQH Job Queue Hack";
+                        JQH: Codeunit "JQH Job Queue";
                     begin
                         JQH.CreateJQEntry(2, 5);
                     end;

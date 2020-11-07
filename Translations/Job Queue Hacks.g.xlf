@@ -38,6 +38,26 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JQH Allowed Errors - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 545287212 - Control 994380745 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Object Type to Run field</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JQH Allowed Errors - Control Object Type to Run - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 545287212 - Control 1577117606 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Object ID to Run field</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JQH Allowed Errors - Control Object ID to Run - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 545287212 - Control 3371015643 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Name field</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JQH Allowed Errors - Control Object Caption to Run - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 545287212 - Control 1476062623 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Error Text field</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JQH Allowed Errors - Control Error Text - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="PageExtension 1693818265 - Action 1429505756 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 942706168">
           <source>Allowed Errors</source>
           <note from="Developer" annotates="general" priority="2"></note>
